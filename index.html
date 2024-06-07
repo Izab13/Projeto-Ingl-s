@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Artístico: Jason Momoa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 20px;
+        }
+        .tabcontent {
+            display: none;
+        }
+        .tabcontent.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Projeto Artístico: Jason Momoa</h1>
+</header>
+
+<nav>
+    <a href="#" onclick="showTab('home')">Home</a>
+    <a href="#" onclick="showTab('film1')">Aquaman</a>
+    <a href="#" onclick="showTab('film2')">Game of Thrones</a>
+    <a href="#" onclick="showTab('film3')">Conan the Barbarian</a>
+    <a href="#" onclick="showTab('film4')">Braven</a>
+</nav>
+
+<div class="content">
+    <div id="home" class="tabcontent active">
+        <h2>Bem-vindo ao Projeto Artístico</h2>
+        <p>Este projeto apresenta o ator Jason Momoa e quatro de seus filmes.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Jason_Momoa_by_Gage_Skidmore_2.jpg" alt="Jason Momoa" style="width:100%;">
+    </div>
+    <div id="film1" class="tabcontent">
+        <h2>Aquaman (2018)</h2>
+        <p>Jason Momoa estrela como Arthur Curry, também conhecido como Aquaman, no universo da DC Comics.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Aquaman_poster.jpg" alt="Aquaman" style="width:100%;">
+    </div>
+    <div id="film2" class="tabcontent">
+        <h2>Game of Thrones (2011-2012)</h2>
+        <p>Momoa interpretou Khal Drogo na série épica de fantasia da HBO, "Game of Thrones".</p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Game_of_Thrones_title_card.jpg/250px-Game_of_Thrones_title_card.jpg" alt="Game of Thrones" style="width:100%;">
+    </div>
+    <div id="film3" class="tabcontent">
+        <h2>Conan the Barbarian (2011)</h2>
+        <p>Ele assume o papel icônico de Conan no reboot de 2011 do clássico filme de fantasia.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Conan2011TeaserPoster.jpg" alt="Conan the Barbarian" style="width:100%;">
+    </div>
+    <div id="film4" class="tabcontent">
+        <h2>Braven (2018)</h2>
+        <p>Momoa estrela como Joe Braven, um lenhador que luta para proteger sua família de um grupo de traficantes de drogas.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Braven_2018.jpg" alt="Braven" style="width:100%;">
+    </div>
+</div>
+
+<script>
+    function showTab(tabId) {
+        const tabs = document.querySelectorAll('.tabcontent');
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+        document.getElementById(tabId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
